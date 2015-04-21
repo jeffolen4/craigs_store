@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  price: 1.5
+  unit: MyString
+  brand: MyString
+  cat_level_1: 1
+  cat_level_2: 1
+  cat_level_3: 1
+  url: MyString
+
+two:
+  name: MyString
+  description: MyText
+  price: 1.5
+  unit: MyString
+  brand: MyString
+  cat_level_1: 1
+  cat_level_2: 1
+  cat_level_3: 1
+  url: MyString

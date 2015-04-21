@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402031601) do
+ActiveRecord::Schema.define(version: 20150420161825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,20 @@ ActiveRecord::Schema.define(version: 20150402031601) do
     t.integer  "product_type_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "url"
+    t.integer  "level"
   end
 
   add_index "product_categories", ["product_type_id"], name: "index_product_categories_on_product_type_id", using: :btree
+
+  create_table "product_item_types", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "product_category_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "product_item_types", ["product_category_id"], name: "index_product_item_types_on_product_category_id", using: :btree
 
   create_table "product_types", force: :cascade do |t|
     t.string   "name"
@@ -31,5 +42,21 @@ ActiveRecord::Schema.define(version: 20150402031601) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.float    "price"
+    t.string   "unit"
+    t.string   "brand"
+    t.integer  "cat_level_1"
+    t.integer  "cat_level_2"
+    t.integer  "cat_level_3"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image_url"
+  end
+
   add_foreign_key "product_categories", "product_types"
+  add_foreign_key "product_item_types", "product_categories"
 end

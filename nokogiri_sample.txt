@@ -1,0 +1,91 @@
+child 5: #<Nokogiri::XML::Element:0x3fe0727948c4 name="div"
+  attributes=[
+    #<Nokogiri::XML::Attr:0x3fe072794720 name="class" value="productDetails">
+  ]
+  children=[
+    #<Nokogiri::XML::Text:0x3fe0727bdf1c "\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t">,
+    #<Nokogiri::XML::Element:0x3fe07277cd78 name="h2"
+      children=[
+        #<Nokogiri::XML::Element:0x3fe07277ccec name="a"
+          attributes=[
+            #<Nokogiri::XML::Attr:0x3fe0727a5de0 name="href" value="details.jsp?R=9143702">
+          ]
+          children=[
+            #<Nokogiri::XML::Text:0x3fe07277cbfc "HP">
+          ]
+        >
+      ]
+    >,
+    #<Nokogiri::XML::Text:0x3fe0727bcae0 "\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t">,
+    #<Nokogiri::XML::Element:0x3fe0727a4e2c name="b"
+      attributes=[
+        #<Nokogiri::XML::Attr:0x3fe0727bc928 name="class" value="shortdesc">
+      ]
+      children=[
+        #<Nokogiri::XML::Element:0x3fe0727a4db4 name="a"
+          attributes=[
+            #<Nokogiri::XML::Attr:0x3fe0727b5f9c name="href" value="details.jsp?R=9143702">
+          ]
+          children=[
+            #<Nokogiri::XML::Text:0x3fe0727a4d8c "HP 950XL, (CN045AN) High-Yield Black Original Ink Cartridge, 2300 Page-Yield">
+          ]
+        >
+      ]
+    >,
+    #<Nokogiri::XML::Text:0x3fe0727b5164 "\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t">,
+    #<Nokogiri::XML::Element:0x3fe0727b4fd4 name="ul"
+      children=[
+        #<Nokogiri::XML::Text:0x3fe0727b4bec "\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t">, #<Nokogiri::XML::Element:0x3fe0727b4a34 name="li"
+          children=[
+            #<Nokogiri::XML::Element:0x3fe0727b45c0 name="span"
+              attributes=[
+                #<Nokogiri::XML::Attr:0x3fe0727b4520 name="class" value="blueText">
+              ]
+              children=[
+                #<Nokogiri::XML::Text:0x3fe0727add4c "• ">
+              ]
+            >,
+            #<Nokogiri::XML::Text:0x3fe0727ada7c "Professional-quality documents with low cost per page for the most demanding office environments. ">
+          ]
+        >,
+        #<Nokogiri::XML::Text:0x3fe0727ad75c "\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t">, #<Nokogiri::XML::Element:0x3fe0727ad630 name="li"
+          children=[
+            #<Nokogiri::XML::Element:0x3fe0727ad220 name="span"
+              attributes=[
+                #<Nokogiri::XML::Attr:0x3fe0727ad144 name="class" value="blueText">
+              ]
+              children=[
+                #<Nokogiri::XML::Text:0x3fe0727ac898 "• ">
+              ]
+            >,
+            #<Nokogiri::XML::Text:0x3fe0727ac500 "Increased durability including highlighter resistance.">
+          ]
+        >,
+      #<Nokogiri::XML::Text:0x3fe0727ac028 "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t">
+    ]
+  >,
+  #<Nokogiri::XML::Text:0x3fe0727cde08 "\r\n\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t">,
+  #<Nokogiri::XML::Element:0x3fe0727cdca0 name="img"
+    attributes=[
+      #<Nokogiri::XML::Attr:0x3fe0727cdbec name="class" value="icons">,
+      #<Nokogiri::XML::Attr:0x3fe0727cdbd8 name="src" value="dyn/images/icons/VALUPAC_17.jpg">, #<Nokogiri::XML::Attr:0x3fe0727cdbb0 name="alt" value="Value Pack Item">,
+      #<Nokogiri::XML::Attr:0x3fe0727cdb9c name="title" value="Value Pack Item">
+    ]
+  >,
+  #<Nokogiri::XML::Text:0x3fe0727cc65c "\r\n\r\n\t\t\t\t\t\t\t\t\t">,
+  #<Nokogiri::XML::Element:0x3fe0727cc51c name="br">,
+  #<Nokogiri::XML::Element:0x3fe0727cc238 name="br">,
+  #<Nokogiri::XML::Element:0x3fe0727c5dc0 name="br">,
+  #<Nokogiri::XML::Text:0x3fe0727c5af0 "\r\n\r\n\t\t\t\t\t\t\t\t\t">,
+  #<Nokogiri::XML::Element:0x3fe0727c59d8 name="b"
+    attributes=[
+      #<Nokogiri::XML::Attr:0x3fe0727c58fc name="class" value="price">
+    ]
+    children=[
+      #<Nokogiri::XML::Text:0x3fe0727c5000 "$46.70/EA">
+    ]
+  >,
+              #<Nokogiri::XML::Text:0x3fe0727c4ca4 " HEWCN045AN\r\n\t\t\t\t\t\t\t\t">
+            ]>
+
+child 6: #<Nokogiri::XML::Text:0x3fe0727c48e4 "\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t">

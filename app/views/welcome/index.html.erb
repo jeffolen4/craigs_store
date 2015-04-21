@@ -1,0 +1,80 @@
+
+<h2>Listing Products</h2>
+<form class="form-inline" id="index-form" method="get" action="<%= root_path() %>">
+
+<div class="form-group">
+
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownCat1" data-toggle="dropdown" aria-expanded="true"><%= @selected_cat_one == "" ? "All" : @select_cat_one_name %>
+      <span class="caret"></span>
+    </button>
+    <ul id="dropdown-cat1" class="dropdown-menu" role="menu" aria-labelledby="dropdownCat1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" value="">All</a></li>
+      <% @cat_first.each do |cat| %>
+        <li role="presentation"><a role="menuitem" tabindex="-1" value="<%= cat.id %>"><%= cat.name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="form-group">
+  <input type="hidden" name="category[selected_cat_one]" value="<%= @selected_cat_one %>"></input>
+  <input type="hidden" name="category[selected_cat_two]" value="<%= @selected_cat_two %>"></input>
+  <input type="hidden" name="category[selected_cat_three]" value="<%= @selected_cat_three %>"></input>
+
+  <% if @selected_cat_one != nil && @selected_cat_one != '' %>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownCat2" data-toggle="dropdown" aria-expanded="true"><%= @selected_cat_two == "" ? "All" : @select_cat_two_name %>
+        <span class="caret"></span>
+      </button>
+      <ul id="dropdown-cat2" class="dropdown-menu" role="menu" aria-labelledby="dropdownCat2">
+        <li role="presentation"><a role="menuitem" tabindex="-1" value="">ALL</a></li>
+        <% @cat_second.each do |cat2| %>
+          <li role="presentation"><a role="menuitem" tabindex="-1" value="<%= cat2.id %>"><%= cat2.name %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+<div class="form-group">
+  <% if @selected_cat_two != nil && @selected_cat_two != '' %>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownCat3" data-toggle="dropdown" aria-expanded="true"><%= @selected_cat_three == "" ? "All" : @select_cat_three_name %>
+        <span class="caret"></span>
+      </button>
+      <ul id="dropdown-cat3" class="dropdown-menu" role="menu" aria-labelledby="dropdownCat3">
+        <li role="presentation"><a role="menuitem" tabindex="-1" value="">ALL</a></li>
+        <% @cat_third.each do |cat3| %>
+          <li role="presentation"><a role="menuitem" tabindex="-1" value="<%= cat3.id %>"><%= cat3.name %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+</form>
+
+<% if @products != nil %>
+<table class="table table-bordered table-hover">
+  <thead class="table-heading">
+    <tr>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>price/unit</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr class="product-row">
+        <td><%= product.brand %>
+        <%= hidden_field( :product,  :id, :value => product.id) %></td>
+        <td><%= product.name %></td>
+        <td><%= "$" + sprintf('%0.2f', product.price) %>/<%= product.unit %></td>
+        <td><img src="<%= product.image_url %>"</td>
+      </tr>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+<% end %>
