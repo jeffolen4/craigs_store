@@ -11,10 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420161825) do
+ActiveRecord::Schema.define(version: 20150504010657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "inks", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "short_description"
+    t.text     "long_description"
+    t.float    "price"
+    t.string   "unit"
+    t.string   "sku"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "image_url"
+  end
+
+  create_table "printer_inks", force: :cascade do |t|
+    t.integer  "printer_id"
+    t.integer  "ink_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "printers", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "model"
+    t.string   "printer_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "product_categories", force: :cascade do |t|
     t.string   "name"
