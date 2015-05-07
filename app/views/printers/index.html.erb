@@ -1,0 +1,65 @@
+
+<h2>Find Your Printer</h2>
+<form class="form-inline" id="index-form" method="get" action="<%= printers_path() %>">
+
+<div class="form-group">
+
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownBrand" data-toggle="dropdown" aria-expanded="true"><%= @selected_brand == nil ? "All" : @selected_brand %>
+      <span class="caret"></span>
+    </button>
+    <ul id="dropdown-brand" class="dropdown-menu" role="menu" aria-labelledby="dropdownBrand">
+      <li role="presentation"><a role="menuitem" tabindex="-1" value="">All</a></li>
+      <% @brands.each do |b| %>
+        <li role="presentation"><a role="menuitem" tabindex="-1" value="<%= b.brand %>"><%= b.brand %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="form-group">
+  <input type="hidden" name="printer[selected_brand]" value="<%= @selected_brand %>"></input>
+  <input type="hidden" name="category[selected_model]" value="<%= @selected_model %>"></input>
+  <input type="hidden" name="category[selected_type]" value="<%= @selected_type %>"></input>
+
+  <% if @selected_brand != nil && @selected_brand != '' %>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownModel" data-toggle="dropdown" aria-expanded="true"><%= @selected_model == nil ? "All" : @selected_model %>
+        <span class="caret"></span>
+      </button>
+      <ul id="dropdown-model" class="dropdown-menu" role="menu" aria-labelledby="dropdownModel">
+        <li role="presentation"><a role="menuitem" tabindex="-1" value="">ALL</a></li>
+        <% @models.each do |m| %>
+          <li role="presentation"><a role="menuitem" tabindex="-1" value="<%= m.model %>"><%= m.model %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+</form>
+
+<% if @printer != nil %>
+<table class="table table-bordered table-hover">
+  <thead class="table-heading">
+    <tr>
+      <th>Image</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @printer.inks.each do |ink| %>
+      <tr class="ink-row">
+        <td><img src="<%= ink.image_url %>"</td>
+        <td><%= ink.brand %>
+        <%= hidden_field( :ink,  :id, :value => ink.id) %></td>
+        <td><%= ink.short_description %></td>
+        <td><%= "$" + sprintf('%0.2f', ink.price) %>/<%= ink.unit %></td>
+      </tr>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+<% end %>
