@@ -1,0 +1,102 @@
+// Place all the styles related to the inks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+thead {
+  background-color: lightgrey;
+}
+
+.recipe-header {
+  font-family: 'Hoefler Text', Georgia, 'Times New Roman', serif;
+}
+
+.textarea-styled {
+  width: 600px;
+  height: 120px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+}
+.hidden {
+  display: none;
+}
+
+.recipe-table th {
+  color: white;
+  background-color: #548905;
+}
+
+.recipe-btn button {
+  background-color: #548905;
+}
+.recipe-btn button:hover {
+  background-color: #345303;
+}
+
+.container .header {
+  padding-top: 10px;
+  background-image: url('/header-image.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 1px;
+  border-radius: 10px;
+}
+
+.footer p {
+  font-family: Tahoma, sans-serif;
+  font-size: 12px;
+  font-size: 0.75em;
+  text-align: center;
+  height: 59px;
+  margin: 0 auto;
+  color: #fff;
+  clear: both;
+  padding: 2em 2em;
+  background: #273A02;
+  position: relative;
+  top: 508px;
+  border: 1px;
+  border-radius: 10px;
+}
+
+.body-container {
+}
+
+.main-row {
+  padding-top: 10px;
+}
+
+.header .header-title {
+  text-align: left;
+}
+
+.header .text-line1 {
+  color: white;
+  // color: #1F340F;
+  font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+	font-weight: normal;
+  font-size: 1.50em;
+	letter-spacing: .2em;
+	line-height: 1.1em;
+	margin:0px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.header .text-line2 {
+  color: white;
+  // color: #1F340F;
+  font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+	font-weight: normal;
+  font-size: 2.25em;
+	letter-spacing: .2em;
+	line-height: 1.1em;
+	margin:0px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.btn-transparent {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}

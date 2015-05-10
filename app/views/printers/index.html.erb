@@ -19,8 +19,8 @@
 
 <div class="form-group">
   <input type="hidden" name="printer[selected_brand]" value="<%= @selected_brand %>"></input>
-  <input type="hidden" name="category[selected_model]" value="<%= @selected_model %>"></input>
-  <input type="hidden" name="category[selected_type]" value="<%= @selected_type %>"></input>
+  <input type="hidden" name="printer[selected_model]" value="<%= @selected_model %>"></input>
+  <input type="hidden" name="printer[selected_type]" value="<%= @selected_type %>"></input>
 
   <% if @selected_brand != nil && @selected_brand != '' %>
     <div class="dropdown">
@@ -51,10 +51,9 @@
 
   <tbody>
     <% @printer.inks.each do |ink| %>
-      <tr class="ink-row">
+      <tr class="ink-row" id="<%= ink.id %>">
         <td><img src="<%= ink.image_url %>"</td>
-        <td><%= ink.brand %>
-        <%= hidden_field( :ink,  :id, :value => ink.id) %></td>
+        <td><%= ink.brand %></td>
         <td><%= ink.short_description %></td>
         <td><%= "$" + sprintf('%0.2f', ink.price) %>/<%= ink.unit %></td>
       </tr>

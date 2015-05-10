@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @ink.brand %> - <%= @ink.short_description %></h3>
+
+<table>
+  <tr>
+    <td><img src="<%= @ink.image_url %>"</td>
+    <td>
+      <ul><% @lines.each do  |line| %>
+          <li><%= line %></li>
+          <% end %>
+      </ul>
+      <em><%= "$" + sprintf('%0.2f', @ink.price) %>/<%= @ink.unit %></em>
+    </td>
+  </tr>
+</table>
+
+<%= link_to 'Back', root_path(printer: { selected_brand: @brand, selected_model: @model } ) %>
